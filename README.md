@@ -1,12 +1,31 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## BLOG project
 
-Currently, two official plugins are available:
+Области хранения данных:
+- база данных
+- BFF (backend for frontend)
+- redux store
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Сущности приложения:
+- пользователи: БД (список пользователей), BFF (сессия текущего пользователя), Store (для отображения в браузере)
+- роль пользователя: БД (список ролей), BFF (сессия пользователя с ролью), Store (использование на клиенте)
+- статья: БД (список статей), Store (отображение в браузере)
+- комментарии: БД (список комментариев), Store (отображение в браузере)
 
-## Expanding the ESLint configuration
+Таблицы БД:
+- пользователи - users: id / login / password / registed_at / role_id
+- роли - roles: id / name
+- статьи - posts: / title / image_url / content / published_at
+- комментарии - comments: id / author_id / post_id / content
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Схема состояния на BFF:
+- сессия текущего пользователя: login / password / role
+
+Схема для Redux Store (на клиенте):
+- user: id / login / roleId
+- posts: array posts: id / imageUrl / publishedAt / commentsCount
+- post:  id / imageUrl / content / publishedAt / comments: array comment: id / author / content / publishedAt
+- users: array user: id / login / publishedAt / role
+
+Важно продумать шаги заранее чтобы во время разработки не было несогласованностей!!!
