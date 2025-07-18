@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Icon } from '../../../../components'
 import styled from "styled-components"
 
@@ -13,13 +14,13 @@ const SmallText = styled.div`
 
 const LogoContainer = ({className}) => {
     return (
-        <div className={className}>
+        <Link className={className} to='/'>
             <Icon id='fa-code' size='70px' margin='0 10px 0 0'/>
             <div>
                 <LargeText>Блог</LargeText>
                 <SmallText>веб-разработчика</SmallText>
             </div>
-        </div>
+        </Link>
     )
 }
 

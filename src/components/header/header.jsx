@@ -4,6 +4,7 @@ import {ControlPanel, Logo} from "./components"
 
 const Description = styled.div`
     font-style: italic;
+    font-size: 16px;
 `;
 
 export const HeaderContainer = ({className}) => (
