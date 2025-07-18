@@ -14,8 +14,7 @@ const AppColumn = styled.div`
 
 const Content = styled.div`
     position: relative;
-    padding: 120px 0;
-    height: 2000px;
+    padding: 220px 0;
     z-index: 0;
 `;
 
