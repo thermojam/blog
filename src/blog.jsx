@@ -1,24 +1,34 @@
 import styled from 'styled-components'
 import {Route, Routes} from "react-router-dom"
+import { Header } from "./components"
+
+const AppColumn = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+    min-height: 100%;
+    background: #fff;
+`;
 
 const Content = styled.div`
-   padding: 120px 0;
-`
+    position: relative;
+    padding: 120px 0;
+    height: 2000px;
+    z-index: 0;
+`;
 
-const title = styled.h2`
-    text-align: center;
-`
-
-const Header = () => <div>Шапка</div>
 const Footer = () => <div>Футер</div>
+
 
 export const Blog = () => {
 
     return (
-        <>
+        <AppColumn>
             <Header/>
             <Content>
-                <h2 className={title}>Content Blog!</h2>
+                <h2>Content Blog!</h2>
                 <Routes>
                     <Route path="/" element={<div>Главная</div>}/>
                     <Route path="/login" element={<div>Авторизация</div>}/>
@@ -30,7 +40,7 @@ export const Blog = () => {
                 </Routes>
             </Content>
             <Footer/>
-        </>
+        </AppColumn>
     )
 }
 
