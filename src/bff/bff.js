@@ -1,13 +1,11 @@
-const generateDate = () => new Date(Math.random() * 1000000000000 + 1999999999).
-    toISOString().substr(0, 16).
-    replace('T', ' ');
+import { getUser } from './get-user.js'
+import { addUser } from "./add-user.js"
+import { createSession } from "./create-session.js"
+
 
 export const server = {
     async authorize(authLogin, authPassword) {
-        const users = await fetch('http://localhost:3001/users')
-            .then((loadedUsers) => loadedUsers.json())
-
-        const user = user.find(({login}) => login === authLogin)
+        const user = await getUser(authLogin)
 
         if (!user) {
             return {
@@ -23,30 +21,14 @@ export const server = {
             }
         }
 
-        const session = {
-
-            logOut() {
-                Object.keys(session).forEach((key) => {
-                    delete session[key];
-                })
-            },
-
-            removeComment() {
-                console.log('Удаление комментария')
-            },
-        }
-
         return {
             error: null,
-            res: session,
+            res: createSession(user.role_id),
         }
     },
 
     async register(regLogin, regPassword) {
-        const users = await fetch('http://localhost:3001/users')
-            .then((loadedUsers) => loadedUsers.json(),)
-
-        const user = users.find(({login}) => login === regLogin)
+        const user = await getUser(regLogin)
 
         if (user) {
             return {
@@ -55,36 +37,11 @@ export const server = {
             }
         }
 
-        await fetch('http://localhost:3001/users', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json; charset=utf-8',
-            },
-            body: JSON.stringify({
-                login: regLogin,
-                password: regPassword,
-                registed_at: generateDate(),
-                role_id: 2,
-            }),
-        })
-
-        const session = {
-
-            logOut() {
-                Object.keys(session).forEach((key) => {
-                    delete session[key];
-                })
-            },
-
-            removeComment() {
-                console.log('Удаление комментария')
-            },
-        }
+        await addUser(regLogin, regPassword)
 
         return {
             error: null,
-            res: session,
+            res: createSession(user.role_id),
         }
-
     }
 }
