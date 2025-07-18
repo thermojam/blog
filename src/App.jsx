@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const Div = styled.div`
     text-align: center;
     color: #5991ff;
-    margin: 20px;
+    margin-top: 30px;
     font-size: 40px;`
 
 export const App = () => {
