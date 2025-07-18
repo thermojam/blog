@@ -5,7 +5,7 @@ const Content = styled.div`
    padding: 120px 0;
 `
 
-const H2 = styled.h2`
+const title = styled.h2`
     text-align: center;
 `
 
@@ -18,7 +18,7 @@ export const Blog = () => {
         <>
             <Header/>
             <Content>
-                <h2>Content Blog!</h2>
+                <h2 className={title}>Content Blog!</h2>
                 <Routes>
                     <Route path="/" element={<div>Главная</div>}/>
                     <Route path="/login" element={<div>Авторизация</div>}/>
