@@ -21,7 +21,6 @@ const Content = styled.div`
 
 const Footer = () => <div>Футер</div>
 
-
 export const Blog = () => {
 
     return (
