@@ -1,13 +1,16 @@
 import {useEffect, useState} from "react";
 import styled from "styled-components"
 
+const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+const url = `http://api.openweathermap.org/data/2.5/weather?q=Saint%20Petersburg&units=metric&lang=ru&appid=${apiKey}`
+
 const FooterContainer = ({className}) => {
     const [city, setCity] = useState(false);
     const [temperature, setTemperature] = useState(false);
     const [weather, setWeather] = useState(false);
 
     useEffect(() => {
-        fetch("http://api.openweathermap.org/data/2.5/weather?q=Saint%20Petersburg&units=metric&lang=ru&appid=9a453960e258b16f0b69feb69ef0571f", {})
+        fetch( url )
             .then((res) => res.json())
             .then(({name, main, weather}) => {
                 setCity(name);
