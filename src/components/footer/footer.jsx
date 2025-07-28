@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import styled from "styled-components"
 
 const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
-const url = `http://api.openweathermap.org/data/2.5/weather?q=Saint%20Petersburg&units=metric&lang=ru&appid=${apiKey}`
+const url = `https://api.openweathermap.org/data/2.5/weather?q=Saint%20Petersburg&units=metric&lang=ru&appid=${apiKey}`
 
 const FooterContainer = ({className}) => {
     const [city, setCity] = useState(false);
