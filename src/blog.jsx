@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import {Route, Routes} from "react-router-dom"
 import { Header, Footer } from "./components"
+import { Authorization } from "./pages"
 
 const AppColumn = styled.div`
     display: flex;
@@ -10,6 +11,7 @@ const AppColumn = styled.div`
     max-width: 1200px;
     min-height: 100%;
     background: #fff;
+    padding-top: 30px;
 `;
 
 const Content = styled.div`
@@ -24,10 +26,9 @@ export const Blog = () => {
         <AppColumn>
             <Header/>
             <Content>
-                <h2>Content Blog!</h2>
                 <Routes>
                     <Route path="/" element={<div>Главная</div>}/>
-                    <Route path="/login" element={<div>Авторизация</div>}/>
+                    <Route path="/login" element={<Authorization/>}/>
                     <Route path="/register" element={<div>Регистрация</div>}/>
                     <Route path="/users" element={<div>Пользователи</div>}/>
                     <Route path="/post" element={<div>Новая статья</div>}/>
