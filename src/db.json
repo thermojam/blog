@@ -1,85 +1,109 @@
 {
-    "users": [
-        {
-            "id": "001",
-            "login": "anton",
-            "password": "qwerty123",
-            "registed_at": "2020-01-12",
-            "role_id": "123"
-        }
-    ],
-
-    "roles": [
-        {
-            "id": 0,
-            "name": "Администратор"
-        },
-        {
-            "id": 1,
-            "name": "Модератор"
-        },
-        {
-            "id": 2,
-            "name": "Читатель"
-        },
-        {
-            "id": 3,
-            "name": "Гость"
-        }
-    ],
-
-    "posts": [
-        {
-            "id": "001",
-            "title": "Where can I get some",
-            "image_url": "https://fastly.picsum.photos/id/455/280/150.jpg?hmac=mpbz92MtFpOE5y7KsWUfGq2ARtjanq2JieEJI2y0344",
-            "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
-            "registed_at": "2045-03-22"
-        },
-
-        {
-            "id": "002",
-            "title": "Why do we use it?",
-            "image_url": "https://fastly.picsum.photos/id/769/280/150.jpg?hmac=SLrIC-uWCy1WNLukIYK9bQluf3yAn1N4jcB6ytpPfmM",
-            "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
-            "registed_at": "2045-08-22"
-        },
-
-        {
-            "id": "003",
-            "title": "Where can I get some",
-            "image_url": "https://fastly.picsum.photos/id/536/280/150.jpg?hmac=8Uu8I5ow73wJVkACknT5lPBYLC2ZaQ3AGBE1qL_pkfA",
-            "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
-            "registed_at": "2035-06-21"
-        },
-
-        {
-            "id": "004",
-            "title": "On the other hand, we denounce with righteous",
-            "image_url": "https://fastly.picsum.photos/id/328/280/150.jpg?hmac=wv8fO4Pq8UVlonxC5x1FTc-5m3FyJEqYLb95qmz8vw4",
-            "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
-            "registed_at": "2028-04-02"
-        },
-
-        {
-            "id": "005",
-            "title": "Where can I get some",
-            "image_url": "https://fastly.picsum.photos/id/455/280/150.jpg?hmac=mpbz92MtFpOE5y7KsWUfGq2ARtjanq2JieEJI2y0344",
-            "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
-            "registed_at": "2040-06-12"
-        },
-
-        {
-            "id": "006",
-            "title": "Temporibus autem quibusdam et aut officiis debitis",
-            "image_url": "https://fastly.picsum.photos/id/328/280/150.jpg?hmac=wv8fO4Pq8UVlonxC5x1FTc-5m3FyJEqYLb95qmz8vw4",
-            "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
-            "registed_at": "2043-07-22"
-        }
-    ],
-
-    "comments": [
-
-    ]
-
+  "users": [
+    {
+      "id": "001",
+      "login": "anton",
+      "password": "qwerty123",
+      "registed_at": "2020-01-12",
+      "role_id": "123"
+    },
+    {
+      "id": "002",
+      "login": "thermojam",
+      "password": "fatal80nus",
+      "registed_at": "2020-01-12",
+      "role_id": "123"
+    },
+    {
+      "login": "iban",
+      "password": "123456",
+      "registed_at": "1979-07-08 09:17",
+      "role_id": 2,
+      "id": "lxq2jq6"
+    },
+    {
+      "login": "nikita",
+      "password": "123456",
+      "registed_at": "1974-02-09 14:32",
+      "role_id": 2,
+      "id": "PBvO2Nw"
+    },
+    {
+      "login": "sasha",
+      "password": "1234567",
+      "registed_at": "2000-08-23 11:52",
+      "role_id": 2,
+      "id": "8cKCpst"
+    },
+    {
+      "login": "maxim",
+      "password": "kranki77",
+      "registed_at": "1985-12-24 11:25",
+      "role_id": 2,
+      "id": "ayrHBDW"
+    }
+  ],
+  "roles": [
+    {
+      "id": 0,
+      "name": "Администратор"
+    },
+    {
+      "id": 1,
+      "name": "Модератор"
+    },
+    {
+      "id": 2,
+      "name": "Читатель"
+    },
+    {
+      "id": 3,
+      "name": "Гость"
+    }
+  ],
+  "posts": [
+    {
+      "id": "001",
+      "title": "Where can I get some",
+      "image_url": "https://fastly.picsum.photos/id/455/280/150.jpg?hmac=mpbz92MtFpOE5y7KsWUfGq2ARtjanq2JieEJI2y0344",
+      "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
+      "registed_at": "2045-03-22"
+    },
+    {
+      "id": "002",
+      "title": "Why do we use it?",
+      "image_url": "https://fastly.picsum.photos/id/769/280/150.jpg?hmac=SLrIC-uWCy1WNLukIYK9bQluf3yAn1N4jcB6ytpPfmM",
+      "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
+      "registed_at": "2045-08-22"
+    },
+    {
+      "id": "003",
+      "title": "Where can I get some",
+      "image_url": "https://fastly.picsum.photos/id/536/280/150.jpg?hmac=8Uu8I5ow73wJVkACknT5lPBYLC2ZaQ3AGBE1qL_pkfA",
+      "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
+      "registed_at": "2035-06-21"
+    },
+    {
+      "id": "004",
+      "title": "On the other hand, we denounce with righteous",
+      "image_url": "https://fastly.picsum.photos/id/328/280/150.jpg?hmac=wv8fO4Pq8UVlonxC5x1FTc-5m3FyJEqYLb95qmz8vw4",
+      "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
+      "registed_at": "2028-04-02"
+    },
+    {
+      "id": "005",
+      "title": "Where can I get some",
+      "image_url": "https://fastly.picsum.photos/id/455/280/150.jpg?hmac=mpbz92MtFpOE5y7KsWUfGq2ARtjanq2JieEJI2y0344",
+      "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
+      "registed_at": "2040-06-12"
+    },
+    {
+      "id": "006",
+      "title": "Temporibus autem quibusdam et aut officiis debitis",
+      "image_url": "https://fastly.picsum.photos/id/328/280/150.jpg?hmac=wv8fO4Pq8UVlonxC5x1FTc-5m3FyJEqYLb95qmz8vw4",
+      "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
+      "registed_at": "2043-07-22"
+    }
+  ],
+  "comments": []
 }

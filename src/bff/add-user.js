@@ -11,5 +11,5 @@ export const addUser = (login, password) => fetch('http://localhost:3001/users',
         registed_at: generateDate(),
         role_id: 2,
     }),
-})
+}).then((createdUser) => createdUser.json())
 

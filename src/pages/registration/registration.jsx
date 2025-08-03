@@ -1,19 +1,19 @@
-import {useState} from "react"
-import {Link, Navigate} from "react-router-dom"
-import {useDispatch, useSelector} from 'react-redux'
+import {useEffect, useState} from "react"
+import {Navigate} from "react-router-dom"
+import {useDispatch, useSelector, useStore} from 'react-redux'
 import {useForm} from 'react-hook-form'
 import * as yup from 'yup'
 import {yupResolver} from '@hookform/resolvers/yup'
 import {server} from '../../bff'
 import {AuthFormError, H2, Button, Input} from "../../components/index.js"
-import {UseResetForm} from '../../hooks'
+import { UseResetForm } from '../../hooks'
 import {setUser} from "../../actions"
 import {selectUserRole} from '../../selectors'
 import {ROLE} from "../../constants/index.js"
 import styled from 'styled-components'
 
 
-const authFormSchema = yup.object().shape({
+const regFormSchema = yup.object().shape({
     login: yup
         .string()
         .required('Заполните Логин')
@@ -30,16 +30,14 @@ const authFormSchema = yup.object().shape({
         )
         .min(6, 'Неверно заполнен пароль. Минимум 6 символа')
         .max(30, 'Неверно заполнен пароль. Максимум 30 символов'),
+
+    passcheck: yup
+        .string()
+        .required('Заполните повтор пароля')
+        .oneOf([yup.ref('password'), null], 'Повтор пароля не совпадает')
 })
 
-const StyledLink = styled(Link)`
-    text-align: center;
-    text-decoration: underline cornflowerblue;
-    margin: 20px 0;
-    font-size: 18px;
-`;
-
-export const AuthorizationContainer = ({className}) => {
+export const RegistrationContainer = ({className}) => {
     const {
         register,
         reset,
@@ -49,18 +47,19 @@ export const AuthorizationContainer = ({className}) => {
         defaultValues: {
             login: '',
             password: '',
+            passcheck: '',
         },
-        resolver: yupResolver(authFormSchema),
+        resolver: yupResolver(regFormSchema),
     })
 
     const [serverError, setServerError] = useState(null)
     const dispatch = useDispatch()
     const roleId = useSelector(selectUserRole);
 
-    UseResetForm(reset)
+    UseResetForm(reset);
 
     const onSubmit = ({login, password}) => {
-        server.authorize(login, password)
+        server.register(login, password)
             .then(({error, res}) => {
                 if (error) {
                     setServerError(`Ошибка запроса: ${error}`)
@@ -70,7 +69,7 @@ export const AuthorizationContainer = ({className}) => {
             })
     }
 
-    const formError = errors?.login?.message || errors?.password?.message
+    const formError = errors?.login?.message || errors?.password?.message || errors?.passcheck?.message
     const errorMessage = formError || serverError;
 
     if (roleId !== ROLE.GUEST) {
@@ -79,7 +78,7 @@ export const AuthorizationContainer = ({className}) => {
 
     return (
         <div className={className}>
-            <H2>Авторизация</H2>
+            <H2>Регистрация</H2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <Input type="text" placeholder="Логин..." {...register('login', {
                     onChange: () => setServerError(null),
@@ -87,15 +86,17 @@ export const AuthorizationContainer = ({className}) => {
                 <Input type="password" placeholder="Пароль..." {...register('password', {
                     onChange: () => setServerError(null),
                 })} />
-                <Button type="submit" disabled={!!formError}>Авторизоваться</Button>
+                <Input type="password" placeholder="Проверка пароля..." {...register('passcheck', {
+                    onChange: () => setServerError(null),
+                })} />
+                <Button type="submit" disabled={!!formError}>Зарегистрироваться</Button>
                 {errorMessage && <AuthFormError>{errorMessage}</AuthFormError>}
-                <StyledLink to='/register'>Регистрация</StyledLink>
             </form>
         </div>
     )
 }
 
-export const Authorization = styled(AuthorizationContainer)`
+export const Registration = styled(RegistrationContainer)`
     display: flex;
     align-items: center;
     flex-direction: column;
