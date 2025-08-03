@@ -1,8 +1,9 @@
 import { getUsers } from "./get-users.js"
 
-export const getUser = async ( login ) => {
+export const getUser = async (login) => {
     const users = await getUsers()
 
-    return users.find(({loginToFind}) => login === loginToFind)
+    return users.find((user) =>
+        user.login.toLowerCase() === login.toLowerCase()
+    )
 }
-

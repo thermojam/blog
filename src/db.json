@@ -3,8 +3,8 @@
         {
             "id": "001",
             "login": "anton",
-            "password": "qwetry123",
-            "registed_at": "2050-01-12",
+            "password": "qwerty123",
+            "registed_at": "2020-01-12",
             "role_id": "123"
         }
     ],
