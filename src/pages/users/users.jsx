@@ -1,13 +1,14 @@
 import styled from "styled-components"
 import {H2} from "../../components/index.js"
 import {UserRow, TableRow} from "./components/index.js"
+import { server } from "../../bff/index.js"
 // import {useDispatch} from "react-redux"
 // import {ROLE} from '../../../../constants'
 
 
 const UsersContainer = ({className}) => {
     // const dispatch = useDispatch();
-
+    const roles = server.fetchRoles()
     const users = [];
 
     return (
