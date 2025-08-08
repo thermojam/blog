@@ -13,6 +13,13 @@
       "registed_at": "1992-01-10 13:17",
       "role_id": 2,
       "id": 2
+    },
+    {
+      "login": "maxim",
+      "password": "webdew",
+      "registed_at": "1973-10-17 04:08",
+      "role_id": 2,
+      "id": 3
     }
   ],
   "roles": [
