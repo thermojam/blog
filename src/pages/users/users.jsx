@@ -41,10 +41,11 @@ const UsersContainer = ({className}) => {
                     </TableRow>
                     {users.map(({id, login, registeredAt, roleId}) => (
                         <UserRow key={id}
+                                 id={id}
                                  login={login}
                                  registeredAt={registeredAt}
                                  roleId={roleId}
-                                 roles={roles.filter(({roleId}) => roleId !== ROLE.GUEST )}/>
+                                 roles={roles.filter(({id: roleId}) => roleId !== ROLE.GUEST )}/>
                     ))}
                 </div>
             </Content>

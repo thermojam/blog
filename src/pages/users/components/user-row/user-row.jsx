@@ -1,20 +1,35 @@
 import {useState} from "react"
 import {Icon} from "../../../../components/index.js"
 import {TableRow} from "../table-row/table-row.jsx"
+import {useServerRequest} from "../../../../hooks/index.js"
 import styled from "styled-components"
-import {useDispatch} from "react-redux"
 
 
-const UserRowContainer = ({className, login, registeredAt, roleId: userRoleId, roles}) => {
+const UserRowContainer = ({
+                              className,
+                              login,
+                              id,
+                              registeredAt,
+                              roleId: userRoleId,
+                              roles
+                          }) => {
+    const [initialRoleId, setInitialRoleId] = useState(userRoleId)
     const [selectedRoleId, setSelectedRoleId] = useState(userRoleId)
 
-    const dispatch = useDispatch()
+    const requestServer = useServerRequest()
 
     const onRoleChange = ({target}) => {
         setSelectedRoleId(Number(target.value));
     }
 
-    const isSaveButtonDisabled = selectedRoleId === userRoleId;
+    const onRoleSave = (userId, newUserRoleId) => {
+        requestServer('updateUserRole', userId, newUserRoleId)
+            .then(() => {
+                setInitialRoleId(newUserRoleId)
+            })
+    }
+
+    const isSaveButtonDisabled = selectedRoleId === initialRoleId;
 
     return (
         <div className={className}>
@@ -28,13 +43,16 @@ const UserRowContainer = ({className, login, registeredAt, roleId: userRoleId, r
                         ))}
                     </select>
 
-                        <Icon id='fa-floppy-o'
-                              margin='0 0 0 10px'
-                              disabled={isSaveButtonDisabled}
-                              onClick={() => dispatch(/*TODO*/)}/>
+                    <Icon id='fa-floppy-o'
+                          margin='0 0 0 10px'
+                          disabled={isSaveButtonDisabled}
+                          onClick={() => onRoleSave(id, selectedRoleId)}/>
                 </div>
             </TableRow>
-            <Icon id='fa-trash-o' margin='0 0 0 10px' onClick={() => dispatch(/*TODO*/)}/>
+            <Icon id='fa-trash-o'
+                  margin='0 0 0 10px'
+                  onClick={() => {
+                  }}/>
         </div>
     )
 }
