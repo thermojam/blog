@@ -1,46 +1,18 @@
 {
   "users": [
     {
-      "id": "001",
-      "login": "anton",
-      "password": "qwerty123",
-      "registed_at": "2020-01-12",
-      "role_id": "123"
-    },
-    {
-      "id": "002",
       "login": "thermojam",
-      "password": "fatal80nus",
-      "registed_at": "2020-01-12",
-      "role_id": "123"
+      "password": "krankiss",
+      "registed_at": "1980-05-08 03:46",
+      "role_id": 0,
+      "id": 1
     },
     {
-      "login": "iban",
-      "password": "123456",
-      "registed_at": "1979-07-08 09:17",
+      "login": "anton",
+      "password": "qwe123",
+      "registed_at": "1992-01-10 13:17",
       "role_id": 2,
-      "id": "lxq2jq6"
-    },
-    {
-      "login": "nikita",
-      "password": "123456",
-      "registed_at": "1974-02-09 14:32",
-      "role_id": 2,
-      "id": "PBvO2Nw"
-    },
-    {
-      "login": "sasha",
-      "password": "1234567",
-      "registed_at": "2000-08-23 11:52",
-      "role_id": 2,
-      "id": "8cKCpst"
-    },
-    {
-      "login": "maxim",
-      "password": "kranki77",
-      "registed_at": "1985-12-24 11:25",
-      "role_id": 2,
-      "id": "ayrHBDW"
+      "id": 2
     }
   ],
   "roles": [

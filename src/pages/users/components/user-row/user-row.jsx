@@ -1,10 +1,14 @@
 import {Icon} from "../../../../components/index.js"
 import {TableRow} from "../table-row/table-row.jsx"
 import styled from "styled-components"
+import {useDispatch} from "react-redux"
 
 
-const UserRowContainer = ({className, login, registeredAt, roleId: userRoleId}) => {
+const UserRowContainer = ({className, login, registeredAt, roleId: userRoleId, roles}) => {
 
+    const dispatch = useDispatch()
+
+    const onRoleChange = () => {}
 
     return (
         <div className={className}>
@@ -12,9 +16,9 @@ const UserRowContainer = ({className, login, registeredAt, roleId: userRoleId}) 
                 <div className="login-column">{login}</div>
                 <div className="registered-at-column">{registeredAt}</div>
                 <div className="role-column">
-                    <select value={userRoleId}>
+                    <select value={userRoleId} onChange={onRoleChange}>
                         {roles.map(({id: roleId, name: roleName}) => (
-                            <option value={roleId}>{roleName}</option>
+                            <option key={roleId} value={roleId}>{roleName}</option>
                         ))}
                     </select>
                     <Icon id='fa-floppy-o' margin='0 0 0 10px' onClick={() => dispatch(/*TODO*/)}/>
