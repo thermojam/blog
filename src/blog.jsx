@@ -28,7 +28,7 @@ export const Blog = () => {
     const dispatch = useDispatch();
 
     useLayoutEffect(() => {
-        const currentUserDataJSON = sessionStorage.getItem("currentUser");
+        const currentUserDataJSON = sessionStorage.getItem('userData');
 
         if (!currentUserDataJSON) {
             return;
@@ -41,7 +41,7 @@ export const Blog = () => {
             roleId: Number(currentUserData.roleId),
         }));
 
-    }, [])
+    }, [dispatch]);
 
     return (
         <AppColumn>
