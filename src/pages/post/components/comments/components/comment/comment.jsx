@@ -4,25 +4,50 @@ import {Icon} from "../../../../../../components"
 const CommentContainer = ({className, id, author, content, publishedAt}) => {
     return (
         <div className={className}>
-            <div className="information-panel">
-                <div className="author"><
-                    Icon id='fa-user-circle-o'
-                         margin='0 0 0 10px'
-                         onClick={() => {
-                         }}/>{author}</div>
-                <div className="published-at">
-                    <Icon id='fa-calendar-o'
-                          margin='0 0 0 10px'
-                          onClick={() => {
-                          }}/>{publishedAt}</div>
+            <div className="comment">
+                <div className="information-panel">
+                    <div className="author">
+                        <Icon
+                            id="fa-user-circle-o"
+                            margin="0 10px 0 0"
+                            // inactive={true}
+                            size="18px"
+                        />
+                        {author}
+                    </div>
+                    <div className="published-at">
+                        <Icon
+                            id="fa-calendar-o"
+                            margin="0 10px 0 0"
+                            // inactive={true}
+                            size="18px"
+                        />
+                        {publishedAt}
+                    </div>
+                </div>
+                <div className="comment-text">{content}</div>
             </div>
-            <div className="comment-text"></div>
+            <Icon
+                id="fa-trash-o"
+                margin="4px 0 0 10px"
+                size="21px"
+                onClick={() => {}}
+            />
         </div>
-    )
-
-}
+    );
+};
 
 export const Comment = styled(CommentContainer)`
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    & .comment {
+        border: 1px solid black;
+        width: 100%;
+        padding: 5px 10px;
+    }
+
     & .information-panel {
         display: flex;
         justify-content: space-between;

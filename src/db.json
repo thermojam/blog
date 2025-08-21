@@ -13,6 +13,13 @@
       "registed_at": "1993-03-14 10:28",
       "role_id": 2,
       "id": 2
+    },
+    {
+      "login": "nikita",
+      "password": "fatal80",
+      "registed_at": "1978-08-30 22:14",
+      "role_id": 2,
+      "id": 3
     }
   ],
   "roles": [
@@ -80,35 +87,166 @@
   "comments": [
     {
       "author_id": 1,
+      "post_id": "004",
+      "published_at": "1974-12-01 17:10",
+      "content": "hello hash!!\n______________",
+      "id": 1
+    },
+    {
+      "author_id": 1,
+      "post_id": "004",
+      "published_at": "1999-07-14 19:33",
+      "content": "fefef",
+      "id": 2
+    },
+    {
+      "author_id": 1,
+      "post_id": "004",
+      "published_at": "2001-07-12 05:46",
+      "content": "dvsegs",
+      "id": 3
+    },
+    {
+      "author_id": 1,
       "post_id": "002",
-      "published_at": "2001-02-27 02:26",
-      "content": "czsvdv",
+      "published_at": "2001-05-21 06:43",
+      "content": "sdfdefeg",
+      "id": 4
+    },
+    {
+      "author_id": 1,
+      "post_id": "002",
+      "published_at": "1994-10-07 15:24",
+      "content": "Wheare\nSun in the ",
+      "id": 5
+    },
+    {
+      "author_id": 1,
+      "post_id": "002",
+      "published_at": "1982-12-13 03:19",
+      "content": "wow",
+      "id": 6
+    },
+    {
+      "author_id": 1,
+      "post_id": "002",
+      "published_at": "1979-09-06 13:09",
+      "content": "wow hell",
       "id": 7
     },
     {
       "author_id": 1,
       "post_id": "002",
-      "published_at": "1985-07-01 00:07",
-      "content": "вмвчмвмв",
+      "published_at": "1978-01-04 16:49",
+      "content": "dsvdv",
       "id": 8
     },
     {
       "author_id": 1,
       "post_id": "002",
-      "published_at": "1980-01-24 15:55",
-      "content": "ыфсфмыс",
+      "published_at": "1994-12-10 15:50",
+      "content": "sad",
       "id": 9
+    },
+    {
+      "author_id": 1,
+      "post_id": "006",
+      "published_at": "1982-04-18 03:23",
+      "content": "hello",
+      "id": 10
+    },
+    {
+      "author_id": 1,
+      "post_id": "003",
+      "published_at": "1989-02-20 21:58",
+      "content": "xssc",
+      "id": 11
+    },
+    {
+      "author_id": 1,
+      "post_id": "003",
+      "published_at": "1972-08-01 00:11",
+      "content": "xssccsscsvs",
+      "id": 12
+    },
+    {
+      "author_id": 1,
+      "post_id": "",
+      "published_at": "1993-10-18 23:23",
+      "content": "zsvvds",
+      "id": 13
+    },
+    {
+      "author_id": 1,
+      "published_at": "1988-02-12 02:11",
+      "content": "scscascsca",
+      "id": 14
+    },
+    {
+      "author_id": 1,
+      "post_id": "",
+      "published_at": "1996-11-21 14:57",
+      "content": " xzzx xz zx zx",
+      "id": 15
+    },
+    {
+      "author_id": 1,
+      "post_id": "",
+      "published_at": "1976-10-24 03:27",
+      "content": "x. xzx",
+      "id": 16
+    },
+    {
+      "author_id": 1,
+      "post_id": "006",
+      "published_at": "1983-04-28 22:22",
+      "content": "s`ccscscsa",
+      "id": 17
+    },
+    {
+      "author_id": 2,
+      "post_id": "006",
+      "published_at": "1992-04-30 04:59",
+      "content": "приветки",
+      "id": 18
+    },
+    {
+      "author_id": 3,
+      "post_id": "006",
+      "published_at": "1978-06-13 02:06",
+      "content": "hell",
+      "id": 19
+    },
+    {
+      "author_id": 3,
+      "post_id": "006",
+      "published_at": "1978-05-17 14:38",
+      "content": "well",
+      "id": 20
     }
   ],
   "sessions": [
     {
-      "hash": "4d90k575i7g",
+      "hash": "0.49673187243459615558549558045342564582824707031250",
       "user": {
         "id": 1,
         "login": "thermojam",
+        "password": "krankiss",
+        "registeredAt": "1980-05-08 03:46",
         "roleId": 0
       },
       "id": 1
+    },
+    {
+      "hash": "0.74403375774048741142507878976175561547279357910156",
+      "user": {
+        "id": 3,
+        "login": "nikita",
+        "password": "fatal80",
+        "registeredAt": "1978-08-30 22:14",
+        "roleId": 2
+      },
+      "id": 2
     }
   ]
 }

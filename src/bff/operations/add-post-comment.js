@@ -5,25 +5,27 @@ import {sessions} from "../sessions.js"
 export const addPostComment = async (hash, userId, postId, content) => {
     const accessRoles = [ROLE.ADMIN, ROLE.MODERATOR, ROLE.READER]
 
-    const hasAccess = await sessions.access(hash, accessRoles)
+    const access = await sessions.access(hash, accessRoles);
 
-    if (!hasAccess) {
+    if (!access) {
         return {
-            error: "Доступ запрещён",
+            error: "Доступ запрещен",
             res: null,
         }
     }
 
+
     await addComment(userId, postId, content)
-    const post = await getPost(postId)
-    const comments = await getComments(postId)
+
+    const post = await getPost(postId);
+
+    const comments = await getComments(postId);
 
     return {
         error: null,
         res: {
-            post,
+            ...post,
             comments,
-        },
+        }
     }
 }
-

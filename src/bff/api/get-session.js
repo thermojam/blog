@@ -1,18 +1,6 @@
-export const getSession = async (hash) => {
-    const res = await fetch(`http://localhost:3001/sessions?hash=${hash}`)
-    const sessions = await res.json()
+import {transformSession} from "../transformers/index.js"
 
-    if (!sessions.length) return null
-
-    const [dbSession] = sessions
-
-    return {
-        id: dbSession.id,
-        hash: dbSession.hash,
-        user: {
-            id: dbSession.user.id,
-            login: dbSession.user.login,
-            roleId: Number(dbSession.user.roleId),
-        },
-    }
-}
+export const getSession = async (hash) =>
+    fetch (`http://localhost:3001/sessions?hash=${hash}`)
+        .then((loadedSession) => loadedSession.json())
+        .then(([loadedSession]) => loadedSession && transformSession(loadedSession));
