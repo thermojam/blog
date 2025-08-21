@@ -1,4 +1,4 @@
-import {setPostData} from "./setPostData.js"
+import {setPostData} from "./set-post-data.js"
 
 export const loadPostAsync = (requestServer, postId) => (dispatch) => {
     requestServer('fetchPost', postId).then((postData) => {
