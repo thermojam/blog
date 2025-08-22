@@ -136,13 +136,6 @@
     },
     {
       "author_id": 1,
-      "post_id": "006",
-      "published_at": "1982-04-18 03:23",
-      "content": "hello",
-      "id": 10
-    },
-    {
-      "author_id": 1,
       "post_id": "003",
       "published_at": "1989-02-20 21:58",
       "content": "xssc",
@@ -197,27 +190,6 @@
       "id": 18
     },
     {
-      "author_id": 3,
-      "post_id": "006",
-      "published_at": "1978-06-13 02:06",
-      "content": "hell",
-      "id": 19
-    },
-    {
-      "author_id": 3,
-      "post_id": "006",
-      "published_at": "1978-05-17 14:38",
-      "content": "well",
-      "id": 20
-    },
-    {
-      "author_id": 1,
-      "post_id": "006",
-      "published_at": "2000-05-13 05:33",
-      "content": "zvsdvsdvs",
-      "id": 21
-    },
-    {
       "author_id": 1,
       "post_id": "003",
       "published_at": "1980-10-05 20:14",
@@ -258,6 +230,17 @@
         "roleId": 0
       },
       "id": 3
+    },
+    {
+      "hash": "0.66236137176619680477784868344315327703952789306641",
+      "user": {
+        "id": 1,
+        "login": "thermojam",
+        "password": "krankiss",
+        "registeredAt": "1980-05-08 03:46",
+        "roleId": 0
+      },
+      "id": 4
     }
   ]
 }
