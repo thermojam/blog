@@ -1,1 +1,1 @@
-export * from './comment/comment.jsx'
+export * from './comment/comment.jsx';

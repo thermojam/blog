@@ -1,24 +1,23 @@
-import {getRoles,} from "../api/index.js"
-import {sessions} from "../sessions.js"
-import {ROLE} from "../constants";
-
+import { getRoles } from '../api';
+import { ROLE } from '../constants';
+import { sessions } from '../sessions';
 
 export const fetchRoles = async (hash) => {
-    const accessRoles = [ROLE.ADMIN]
+	const accessRoles = [ROLE.ADMIN];
 
-    const access = await sessions.access(hash, accessRoles)
+	const access = await sessions.access(hash, accessRoles);
 
-    if (!access) {
-        return {
-            error: "Доступ запрещен",
-            res: null,
-        }
-    }
+	if (!access) {
+		return {
+			error: 'Доступ запрещён',
+			res: null,
+		};
+	}
 
-    const roles = await getRoles()
+	const roles = await getRoles();
 
-    return {
-        error: null,
-        res: roles,
-    }
+	return {
+		error: null,
+		res: roles,
+	};
 };

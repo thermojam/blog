@@ -1,250 +1,127 @@
 {
-    "users": [
-        {
-            "login": "thermojam",
-            "password": "krankiss",
-            "registed_at": "1980-05-08 03:46",
-            "role_id": 0,
-            "id": 1
-        },
-        {
-            "login": "anton",
-            "password": "qwe123",
-            "registed_at": "1993-03-14 10:28",
-            "role_id": 2,
-            "id": 2
-        },
-        {
-            "login": "nikita",
-            "password": "fatal80",
-            "registed_at": "1978-08-30 22:14",
-            "role_id": 2,
-            "id": 3
-        }
-    ],
-
-    "roles": [
-        {
-            "id": 0,
-            "name": "Администратор"
-        },
-        {
-            "id": 1,
-            "name": "Модератор"
-        },
-        {
-            "id": 2,
-            "name": "Читатель"
-        },
-        {
-            "id": 3,
-            "name": "Гость"
-        }
-    ],
-
-    "posts": [
-        {
-            "id": "001",
-            "title": "Where can I get some",
-            "imageUrl": "https://dspncdn.com/a1/media/originals/cc/1e/59/cc1e593dd5e4cb9a97a6634c9d07906b.jpg",
-            "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
-            "publishedAt": "2045-03-22"
-        },
-        {
-            "id": "002",
-            "title": "Why do we use it?",
-            "imageUrl": "https://dspncdn.com/a1/media/originals/60/4e/e1/604ee1f6f12c026a260bdcb2a0b4d70f.jpg",
-            "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
-            "publishedAt": "2045-08-22"
-        },
-        {
-            "id": "003",
-            "title": "Where can I get some",
-            "imageUrl": "https://dspncdn.com/a1/media/originals/23/18/e2/2318e20b610c1b4cd89f19b0903d2e6f.jpg",
-            "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
-            "publishedAt": "2035-06-21"
-        },
-        {
-            "id": "004",
-            "title": "On the other hand, we denounce with righteous",
-            "imageUrl": "https://dspncdn.com/a1/media/originals/da/cf/6f/dacf6f522c27583c458f088ce0ac95eb.jpg",
-            "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
-            "publishedAt": "2028-04-02"
-        },
-        {
-            "id": "005",
-            "title": "Where can I get some",
-            "imageUrl": "https://dspncdn.com/a1/media/originals/65/ca/36/65ca36a65b2f868abdf5b3b118a37e33.jpg",
-            "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
-            "publishedAt": "2040-06-12"
-        },
-        {
-            "id": "006",
-            "title": "Temporibus autem quibusdam et aut officiis debitis",
-            "imageUrl": "https://dspncdn.com/a1/media/originals/7f/f2/43/7ff2436d027e036182cacb4975653556.jpg",
-            "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
-            "publishedAt": "2043-07-22"
-        }
-    ],
-
-    "comments": [
-        {
-            "author_id": 1,
-            "post_id": "004",
-            "published_at": "1974-12-01 17:10",
-            "content": "hello hash!!\n______________",
-            "id": 1
-        },
-        {
-            "author_id": 1,
-            "post_id": "004",
-            "published_at": "1999-07-14 19:33",
-            "content": "fefef",
-            "id": 2
-        },
-        {
-            "author_id": 1,
-            "post_id": "004",
-            "published_at": "2001-07-12 05:46",
-            "content": "dvsegs",
-            "id": 3
-        },
-        {
-            "author_id": 1,
-            "post_id": "002",
-            "published_at": "1994-10-07 15:24",
-            "content": "Wheare\nSun in the ",
-            "id": 5
-        },
-        {
-            "author_id": 1,
-            "post_id": "002",
-            "published_at": "1982-12-13 03:19",
-            "content": "wow",
-            "id": 6
-        },
-        {
-            "author_id": 1,
-            "post_id": "002",
-            "published_at": "1979-09-06 13:09",
-            "content": "wow hell",
-            "id": 7
-        },
-        {
-            "author_id": 1,
-            "post_id": "002",
-            "published_at": "1978-01-04 16:49",
-            "content": "dsvdv",
-            "id": 8
-        },
-        {
-            "author_id": 1,
-            "post_id": "003",
-            "published_at": "1989-02-20 21:58",
-            "content": "xssc",
-            "id": 11
-        },
-        {
-            "author_id": 1,
-            "post_id": "003",
-            "published_at": "1972-08-01 00:11",
-            "content": "xssccsscsvs",
-            "id": 12
-        },
-        {
-            "author_id": 1,
-            "post_id": "",
-            "published_at": "1993-10-18 23:23",
-            "content": "zsvvds",
-            "id": 13
-        },
-        {
-            "author_id": 1,
-            "published_at": "1988-02-12 02:11",
-            "content": "scscascsca",
-            "id": 14
-        },
-        {
-            "author_id": 1,
-            "post_id": "",
-            "published_at": "1996-11-21 14:57",
-            "content": " xzzx xz zx zx",
-            "id": 15
-        },
-        {
-            "author_id": 1,
-            "post_id": "",
-            "published_at": "1976-10-24 03:27",
-            "content": "x. xzx",
-            "id": 16
-        },
-        {
-            "author_id": 1,
-            "post_id": "006",
-            "published_at": "1983-04-28 22:22",
-            "content": "s`ccscscsa",
-            "id": 17
-        },
-        {
-            "author_id": 2,
-            "post_id": "006",
-            "published_at": "1992-04-30 04:59",
-            "content": "приветки",
-            "id": 18
-        },
-        {
-            "author_id": 1,
-            "post_id": "003",
-            "published_at": "1980-10-05 20:14",
-            "content": "wdafwf",
-            "id": 22
-        }
-    ],
-
-    "sessions": [
-        {
-            "hash": "0.49673187243459615558549558045342564582824707031250",
-            "user": {
-                "id": 1,
-                "login": "thermojam",
-                "password": "krankiss",
-                "registeredAt": "1980-05-08 03:46",
-                "roleId": 0
-            },
-            "id": 1
-        },
-        {
-            "hash": "0.84558450800507822808782520951353944838047027587891",
-            "user": {
-                "id": 1,
-                "login": "thermojam",
-                "password": "krankiss",
-                "registeredAt": "1980-05-08 03:46",
-                "roleId": 0
-            },
-            "id": 2
-        },
-        {
-            "hash": "0.34681915885686553924216468658414669334888458251953",
-            "user": {
-                "id": 1,
-                "login": "thermojam",
-                "password": "krankiss",
-                "registeredAt": "1980-05-08 03:46",
-                "roleId": 0
-            },
-            "id": 3
-        },
-        {
-            "hash": "0.66236137176619680477784868344315327703952789306641",
-            "user": {
-                "id": 1,
-                "login": "thermojam",
-                "password": "krankiss",
-                "registeredAt": "1980-05-08 03:46",
-                "roleId": 0
-            },
-            "id": 4
-        }
-    ]
+  "users": [
+    {
+      "login": "thermojam",
+      "password": "kranki77",
+      "registed_at": "2055-04-28 20:17",
+      "role_id": 0,
+      "id": 1
+    },
+    {
+      "login": "anton",
+      "password": "qwe123",
+      "registed_at": "2044-11-16 16:18",
+      "role_id": 2,
+      "id": 2
+    }
+  ],
+  "roles": [
+    {
+      "id": 0,
+      "name": "Администратор"
+    },
+    {
+      "id": 1,
+      "name": "Модератор"
+    },
+    {
+      "id": 2,
+      "name": "Читатель"
+    },
+    {
+      "id": 3,
+      "name": "Гость"
+    }
+  ],
+  "posts": [
+    {
+      "id": "001",
+      "title": "Как правильно структурировать контент на веб-странице",
+      "image_url": "https://dspncdn.com/a1/media/originals/da/37/d1/da37d102a8c894f045ac4f90707bab96.jpg",
+      "content": "Структура контента — основа удобства восприятия информации пользователем. Правильное разделение текста на логические блоки, использование заголовков разных уровней и списков помогает читателю быстро ориентироваться на странице. Важно соблюдать иерархию элементов, чтобы ключевая информация была выделена и легко находилась. Кроме того, хорошо продуманная структура облегчает работу поисковых систем, что положительно сказывается на SEO. В статье мы рассмотрим принципы организации контента, которые делают страницы более понятными и привлекательными.",
+      "published_at": "2028-04-20"
+    },
+    {
+      "id": "002",
+      "title": "Влияние визуальной иерархии на пользовательский опыт ",
+      "image_url": "https://dspncdn.com/a1/media/originals/ad/eb/bb/adebbb4f1b39b4ad3365aa19f79d5b90.jpg",
+      "content": "Типографика — это искусство оформления текста, которое напрямую влияет на удобство чтения и восприятие информации. Выбор шрифтов, межстрочных интервалов, длины строк и контрастности играет ключевую роль в создании комфортного пользовательского интерфейса. В статье мы разберём основные правила типографики, которые помогают сделать текст более доступным и привлекательным, а также повысить вовлечённость посетителей сайта",
+      "published_at": "2024-04-12"
+    },
+    {
+      "id": "004",
+      "title": "Оптимизация загрузки изображений",
+      "image_url": "https://dspncdn.com/a1/media/originals/c5/46/24/c546245b6ef839a394e23302a738ad81.jpg",
+      "content": "Изображения часто занимают большую часть веса веб-страницы, что влияет на скорость её загрузки. Оптимизация изображений — важный этап в разработке, позволяющий сохранить визуальное качество при минимальном размере файлов. В статье мы обсудим методы сжатия, выбор форматов и техники адаптивной загрузки, которые позволяют подстраиваться под разные устройства и скорости интернета. Правильный подход к изображениям улучшает пользовательский опыт и снижает показатель отказов.",
+      "published_at": "2027-03-30"
+    },
+    {
+      "id": "005",
+      "title": "Значение отзывчивого дизайна для современных веб-проектов",
+      "image_url": "https://dspncdn.com/a1/media/originals/79/90/89/799089c21fba71d3f6f343db9ad2fbb8.jpg",
+      "content": "Отзывчивый дизайн — это подход, при котором веб-страница адаптируется под размеры экрана и особенности устройства пользователя. Такой дизайн обеспечивает удобство просмотра и взаимодействия как на больших мониторах, так и на мобильных телефонах. В статье мы рассмотрим основные принципы создания гибких макетов, использование пропорциональных единиц измерения и адаптивных сеток. Понимание отзывчивого дизайна помогает создавать универсальные сайты, которые привлекают и удерживают аудиторию.",
+      "published_at": "2024-03-27"
+    },
+    {
+      "id": "006",
+      "title": "Роль типографики в улучшении читаемости и восприятия контента",
+      "image_url": "https://dspncdn.com/a1/media/originals/37/c7/0d/37c70d20a0003fa43741ac6744aaf893.jpg",
+      "content": "Типографика — это искусство оформления текста, которое напрямую влияет на удобство чтения и восприятие информации. Выбор шрифтов, межстрочных интервалов, длины строк и контрастности играет ключевую роль в создании комфортного пользовательского интерфейса. В статье мы разберём основные правила типографики, которые помогают сделать текст более доступным и привлекательным, а также повысить вовлечённость посетителей сайта.",
+      "published_at": "2025-03-19"
+    },
+    {
+      "id": "007",
+      "title": "Как минимизировать время отклика веб-страницы для улучшения пользовательского опыта",
+      "image_url": "https://dspncdn.com/a1/media/originals/19/a3/1f/19a31f2a5038426f3bbe80dab94e493a.jpg",
+      "content": "Время отклика страницы — критический фактор, влияющий на удовлетворённость пользователей. Чем быстрее загружается и реагирует сайт, тем выше вероятность, что посетитель останется и выполнит нужное действие. В статье мы обсудим основные причины задержек, такие как тяжёлые ресурсы, неэффективные запросы и блокирующие скрипты. Также рассмотрим методы оптимизации, включая асинхронную загрузку, кэширование и уменьшение количества запросов. Понимание этих аспектов помогает создавать быстрые и отзывчивые веб-приложения.",
+      "published_at": "2026-02-16"
+    },
+    {
+      "image_url": "https://dspncdn.com/a1/media/originals/e0/45/44/e045446c9495b21746a847408a3cd372.jpg",
+      "title": "Психология восприятия цвета в веб-дизайне",
+      "content": "Цвет — один из самых мощных инструментов в арсенале веб-дизайнера, который влияет не только на эстетику сайта, но и на поведение пользователей. Психология цвета изучает, как различные оттенки вызывают определённые эмоции и ассоциации, что напрямую отражается на восприятии бренда и удобстве взаимодействия с интерфейсом.\n\nПри выборе цветовой палитры важно учитывать целевую аудиторию и цели сайта. Например, холодные оттенки синего и зелёного часто ассоциируются с надёжностью и спокойствием, что подходит для корпоративных и финансовых ресурсов. Тёплые цвета — красный, оранжевый, жёлтый — привлекают внимание и стимулируют активность, что эффективно для сайтов с акцентом на продажи или акции.\n\nКроме эмоционального воздействия, цвет влияет на читаемость и восприятие информации. Контраст между фоном и текстом должен быть достаточным, чтобы обеспечить комфортное чтение, особенно для пользователей с нарушениями зрения. Также важно учитывать культурные особенности восприятия цвета, так как в разных странах одни и те же оттенки могут иметь разные значения.\n\nВ статье мы подробно рассмотрим принципы создания гармоничных цветовых схем, включая монохромные, аналоговые и комплементарные палитры. Обсудим, как использовать цвет для выделения ключевых элементов интерфейса — кнопок, ссылок, уведомлений — чтобы направлять внимание пользователя и улучшать навигацию.\n\nОсобое внимание уделяется вопросам доступности: как подобрать цвета, чтобы сайт был удобен для людей с дальтонизмом и другими нарушениями восприятия цвета. Мы рассмотрим инструменты и методики проверки контрастности и предложим рекомендации по адаптации дизайна.\n\nПонимание психологии цвета и грамотное применение этих знаний в веб-дизайне помогает создавать не только красивые, но и эффективные сайты, которые вызывают доверие, удерживают внимание и способствуют достижению бизнес-целей.\n\n",
+      "published_at": "2038-12-09 17:12",
+      "id": "0xMb-HT"
+    }
+  ],
+  "comments": [
+    {
+      "author_id": "001",
+      "post_id": "003",
+      "content": "Asd asdasdasd",
+      "published_at": "2052-11-22 01:34",
+      "id": 1
+    },
+    {
+      "author_id": 2,
+      "post_id": "002",
+      "content": "Невероятно интересно!\nЯ в восторге)",
+      "published_at": "2052-05-04 07:40",
+      "id": 2
+    }
+  ],
+  "sessions": [
+    {
+      "hash": "0.88726907552912614995932472083950415253639221191406",
+      "user": {
+        "id": "001",
+        "login": "admin",
+        "password": "admin123",
+        "registedAt": "2020-05-13 10:24",
+        "roleId": 0
+      },
+      "id": 1
+    },
+    {
+      "hash": "0.36786260664863612568353801179910078644752502441406",
+      "user": {
+        "id": 2,
+        "login": "anton",
+        "password": "qwe123",
+        "registedAt": "2044-11-16 16:18",
+        "roleId": 2
+      },
+      "id": 2
+    }
+  ]
 }

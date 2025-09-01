@@ -1,54 +1,82 @@
-import {Link, useNavigate} from "react-router-dom"
-import {Button, Icon} from '../../../../components'
-import {useDispatch, useSelector} from "react-redux"
-import {selectUserSession, selectUserLogin, selectUserRole} from '../../../../selectors'
-import {ROLE} from "../../../../constants/index.js"
-import {logout} from "../../../../actions/logout.js"
-import styled from "styled-components"
-
+import styled from 'styled-components';
+import { Button, Icon } from '../../../../components';
+import { Link, useNavigate } from 'react-router-dom';
+import { ROLE } from '../../../../constants';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+	selectUserLogin,
+	selectUserRole,
+	selectUserSession,
+} from '../../../../selectors';
+import { logout } from '../../../../actions';
+import { checkAccess } from '../../../../utils';
 
 const RightAligned = styled.div`
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 `;
 
 const UserName = styled.div`
-    font-size: 18px;
-    font-weight: bold;
+	height: 32px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	font-weight: bold;
 `;
 
-const ControlPanelContainer = ({className}) => {
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
-    const roleID = useSelector(selectUserRole);
-    const login = useSelector(selectUserLogin);
-    const session = useSelector(selectUserSession)
+const ControlPanelContainer = ({ className }) => {
+	const navigate = useNavigate();
+	const dispatch = useDispatch();
+	const roleId = useSelector(selectUserRole);
+	const login = useSelector(selectUserLogin);
+	const session = useSelector(selectUserSession);
 
-    const onLogOut = () => {
-        dispatch(logout(session))
-        sessionStorage.removeItem('userData')
-    }
+	const isAdmin = checkAccess([ROLE.ADMIN], roleId);
 
-    return (
-        <div className={className}>
-            <RightAligned>
-                {roleID === ROLE.GUEST ? (
-                    <Button> <Link to='/login'>Войти</Link></Button>
-                ) : (<>
-                    <UserName>{login}</UserName>
-                    <Icon id='fa-sign-out' margin='0 0 0 10px' onClick={onLogOut}/>
-                </>)}
-            </RightAligned>
-            <RightAligned>
-                <Icon id='fa-backward' margin='10px 0 0 0' onClick={() => navigate(-1)}/>
-                <Link to='/post'><Icon id='fa-file-text-o' margin='10px 0 0 15px'/></Link>
-                <Link to='/users'><Icon id='fa-users' margin='10px 0 0 15px'/></Link>
-            </RightAligned>
-        </div>
-    )
-}
+	const onLogout = () => {
+		dispatch(logout(session));
+		sessionStorage.removeItem('userData');
+	};
 
-export const ControlPanel = styled(ControlPanelContainer)`
+	return (
+		<div className={className}>
+			<RightAligned>
+				{roleId === ROLE.GUEST ? (
+					<Button>
+						<Link to="/login">Войти</Link>
+					</Button>
+				) : (
+					<>
+						<UserName>{login}</UserName>
+						<Icon
+							onClick={onLogout}
+							id="fa fa-sign-out"
+							margin="0 0 0 10px"
+						/>
+					</>
+				)}
+			</RightAligned>
+			<RightAligned>
+				<Icon
+					onClick={() => navigate(-1)}
+					id="fa fa-backward"
+					margin="10px 0 0 0"
+				/>
+				{isAdmin && (
+					<>
+						<Link to="/post">
+							<Icon id="fa fa-file-text-o" margin="10px 0 0 16px" />
+						</Link>
+						<Link to="/users">
+							<Icon id="fa fa-users" margin="10px 0 0 16px" />
+						</Link>
+					</>
+				)}
+			</RightAligned>
+		</div>
+	);
+};
 
-`;
+export const ControlPanel = styled(ControlPanelContainer)``;

@@ -1,2 +1,2 @@
-export * from './use-reset-form.jsx'
-export * from './use-server-request.js'
+export * from './use-reset-form';
+export * from './use-server-request';

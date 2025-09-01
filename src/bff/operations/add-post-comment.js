@@ -1,31 +1,27 @@
-import {addComment, getComments, getPost} from "../api"
-import {ROLE} from "../constants/index.js"
-import {sessions} from "../sessions.js"
+import { addComment, getPost } from '../api';
+import { ROLE } from '../constants';
+import { sessions } from '../sessions';
+import { getPostCommentsWithAuthor } from '../utils';
 
 export const addPostComment = async (hash, userId, postId, content) => {
-    const accessRoles = [ROLE.ADMIN, ROLE.MODERATOR, ROLE.READER]
+	const accessRoles = [ROLE.ADMIN, ROLE.MODERATOR, ROLE.READER];
+	const access = await sessions.access(hash, accessRoles);
 
-    const access = await sessions.access(hash, accessRoles);
+	if (!access) {
+		return {
+			error: 'Доступ запрещён',
+			res: null,
+		};
+	}
 
-    if (!access) {
-        return {
-            error: "Доступ запрещен",
-            res: null,
-        }
-    }
+	await addComment(userId, postId, content);
 
+	const post = await getPost(postId);
 
-    await addComment(userId, postId, content)
+	const commentsWithAuthor = await getPostCommentsWithAuthor(postId);
 
-    const post = await getPost(postId);
-
-    const comments = await getComments(postId);
-
-    return {
-        error: null,
-        res: {
-            ...post,
-            comments,
-        }
-    }
-}
+	return {
+		error: null,
+		res: { ...post, comments: commentsWithAuthor },
+	};
+};

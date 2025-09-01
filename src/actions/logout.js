@@ -1,10 +1,8 @@
-import {ACTION_TYPE} from "./action-type.js"
-import { server } from "../bff/index.js"
+import { server } from '../bff';
+import { ACTION_TYPE } from './action-type';
 
 export const logout = (session) => {
-    server.logout(session)
+	server.logout(session);
 
-    return {
-        type: ACTION_TYPE.LOGOUT,
-    }
-}
+	return { type: ACTION_TYPE.LOGOUT };
+};

@@ -1,32 +1,28 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
-const TableRowContainer = ({className, children}) => (
-    <div className={className}>
-        {children}
-    </div>
-)
+const TableRowContainer = ({ className, children }) => {
+	return <div className={className}>{children}</div>;
+};
 
 export const TableRow = styled(TableRowContainer)`
-    display: flex;
-    align-items: center;
-    border: ${({border}) => (border ? '1px solid gray' : 'none')};
+	display: flex;
+	align-items: center;
+	border: ${({ border }) => (border ? '1px solid black' : 'none')};
 
+	& > div {
+		display: flex;
+		padding: 0 10px;
+	}
 
-    & > div {
-        padding: 0 10px;
-        display: flex;
+	& .login-column {
+		width: 172px;
+	}
 
-    }
+	& .registered-at-column {
+		width: 213px;
+	}
 
-    & .login-column {
-        width: 172px;
-    }
-
-    & .registered-at-column {
-        width: 213px;
-    }
-
-    & .role-column {
-        width: auto;
-    }
-`
+	& .role-column {
+		width: auto;
+	}
+`;

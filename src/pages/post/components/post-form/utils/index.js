@@ -1,1 +1,1 @@
-export * from './sanitize-content.js'
+export * from './sanitize-content';
